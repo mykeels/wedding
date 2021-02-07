@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Vibes";
+  src: url(fonts/great-vibes/GreatVibes-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Alex";
+  src: url(fonts/alex-brush/AlexBrush-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Scriptina";
+  src: url(fonts/scriptina/SCRIPTIN.ttf) format("truetype");
+  font-style: normal;
+  font-display: block;
+}
+
+.font-vibes {
+  font-family: "Vibes";
+}
+
+.font-alex {
+  font-family: "Alex";
+}
+
+.font-scriptina {
+  font-family: "Scriptina";
+}
