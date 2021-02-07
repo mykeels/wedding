@@ -7,7 +7,7 @@
     "build": "npm run copy-files && cross-env NODE_ENV=production npm run compile",
     "compile": "postcss src/styles.css -o dist/styles.css",
     "dev": "cross-env NODE_ENV=development concurrently \"npm run copy-files -- -w\" \"npm run compile -- --watch\" \"live-server ./dist\"",
-    "copy-files": "cpx src/**/* dist",
+    "copy-files": "cpx \"src/**/*\" dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
