@@ -4,6 +4,10 @@
   "description": "A simple webpage for Michael's and Grace's Wedding on the 14th of February, 2021.",
   "main": "index.js",
   "scripts": {
+    "build": "cross-env NODE_ENV=production npm run compile",
+    "compile": "postcss src/styles.css -o dist/styles.css",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run compile -- --watch\" \"live-server ./dist\" \"npm run copy-files\"",
+    "copy-files": "cpx src/**/*.html dist -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,5 +17,12 @@
     "autoprefixer": "^10.2.4",
     "postcss": "^8.2.5",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.3",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^8.3.1"
   }
 }
