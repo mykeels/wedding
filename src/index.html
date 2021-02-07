@@ -98,8 +98,9 @@
             </h2>
           </div>
         </div>
-        <div class="w-full relative text-center">
-          <h2 class="mt-4 text-3xl font-vibes">Sunday, 14th February, 2021</h2>
+        <div class="w-full relative text-center block">
+          <h2 class="mt-4 text-3xl font-vibes block 2xl:hidden">Sunday, 14th February, 2021</h2>
+          <h2 class="mt-4 text-3xl font-vibes hidden 2xl:block">at</h2>
           <h2 class="mt-4 text-3xl font-vibes">11am - 4pm</h2>
           <div class="mt-4 text-2xl">
             <a
@@ -107,6 +108,7 @@
               href="http://www.google.com/calendar/render?action=TEMPLATE&text=Grace%20and%20Michael's%20Wedding&dates=20200214T110000Z%2B1/20200214T160000Z%2B1&details=Watch%20live%20at%20https%3A%2F%2Fmeet.google.com%2Fmsd-mkog-xji&location=https%3A%2F%2Fmeet.google.com%2Fmsd-mkog-xji&trp=false&sprop=&sprop=name"
               target="_blank"
               rel="nofollow"
+              title="Add this event to your calendar, and get notified"
             >
               Save the Date
               <span class="absolute" style="left: -13px; top: -10px">
@@ -163,21 +165,69 @@
               </span>
             </a>
           </div>
+
+          <h2 class="mt-24 text-3xl font-vibes">Wish us well!</h2>
+
+          <div
+            class="mt-4 text-5xl font-vibes lg:grid grid-cols-2 gap-4 text-red-500"
+          >
+            <div
+              class="relative rounded p-4 col-span-1 m-1"
+            >
+              <div>Michael</div>
+              <a href="https://twitter.com/mykeels" target="_blank">
+                <img
+                  src="images/twitter-logo.png"
+                  alt="Twitter Logo"
+                  class="w-10 inline-block mx-2"
+                />
+              </a>
+              <a href="https://instagram.com/mykeels" target="_blank"
+                ><img
+                  src="images/instagram-logo.png"
+                  alt="Instagram Logo"
+                  class="w-10 inline-block mx-2"
+              /></a>
+              <a href="https://facebook.com/michael.ikechi" target="_blank"
+                ><img
+                  src="images/facebook-logo.png"
+                  alt="Facebook Logo"
+                  class="w-10 inline-block mx-2"
+              /></a>
+            </div>
+            <div class="relative rounded p-4 col-span-1 m-1">
+              <div>Grace</div>
+              <a href="https://twitter.com/_graceama" target="_blank"
+                ><img
+                  src="images/twitter-logo.png"
+                  alt="Twitter Logo"
+                  class="w-10 inline-block mx-2"
+              /></a>
+              <a href="https://instagram.com/_graceama" target="_blank"
+                ><img
+                  src="images/instagram-logo.png"
+                  alt="Instagram Logo"
+                  class="w-10 inline-block mx-2"
+              /></a>
+              <a href="https://facebook.com/grace.amaogu" target="_blank"
+                ><img
+                  src="images/facebook-logo.png"
+                  alt="Facebook Logo"
+                  class="w-10 inline-block mx-2"
+              /></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <script>
       function generateCalendarLink() {
-        const meetLink = "https://meet.google.com/msd-mkog-xji"
+        const meetLink = "https://meet.google.com/msd-mkog-xji";
         const text = encodeURIComponent("Grace and Michael's Wedding");
         const startDate = encodeURIComponent("20200214T110000Z+1");
         const endDate = encodeURIComponent("20200214T160000Z+1");
-        const details = encodeURIComponent(
-          `Watch live at ${meetLink}`
-        );
-        const location = encodeURIComponent(
-          meetLink
-        );
+        const details = encodeURIComponent(`Watch live at ${meetLink}`);
+        const location = encodeURIComponent(meetLink);
         return (
           `http://www.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${startDate}/${endDate}` +
           `&details=${details}&location=${location}&trp=false&sprop=&sprop=name:`
