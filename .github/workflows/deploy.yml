@@ -17,8 +17,8 @@ jobs:
     - name: deploying to prod via ssh
       uses: garygrossgarten/github-action-ssh@release
       with:
-        host: ${{ secrets.STAGING_SSH_HOST }}
-        username: ${{ secrets.STAGING_SSH_USERNAME }}
-        password: ${{ secrets.STAGING_SSH_PASSWORD }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
         port: 22
-        command: bash /var/www/wedding.mykeels.com/scripts/deploy.sh /var/www/wedding.mykeels.com
+        command: bash ${{ secrets.SSH_WWW_PATH }}/scripts/deploy.sh ${{ secrets.SSH_WWW_PATH }}
