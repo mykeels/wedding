@@ -1,0 +1,12 @@
+{
+  "name": "mykeels-wedding",
+  "version": "1.0.0",
+  "description": "A simple webpage for Michael's and Grace's Wedding on the 14th of February, 2021.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "mykeels",
+  "license": "MIT"
+}
