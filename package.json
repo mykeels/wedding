@@ -6,8 +6,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production npm run compile",
     "compile": "postcss src/styles.css -o dist/styles.css",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run compile -- --watch\" \"live-server ./dist\" \"npm run copy-files\"",
-    "copy-files": "cpx src/**/*.html dist -w",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run copy-files\" \"npm run compile -- --watch\" \"live-server ./dist\"",
+    "copy-files": "cpx src/**/* dist -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
