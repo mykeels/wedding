@@ -2,4 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("fonts.css");
+@keyframes pulse {
+  50% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+  }
+}
+
+.add-to-calendar:hover > span.absolute {
+  -webkit-animation: pulse 0.5s ease;
+  animation: pulse 0.5s ease;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
