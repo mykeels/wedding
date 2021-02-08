@@ -132,7 +132,7 @@
               rel="nofollow"
               title="Add this event to your calendar, get notified, and watch live on the Google Meet Link"
             >
-              Save the Date | Watch Live
+              <span class="content">Save the Date | Watch Live</span>
               <span class="absolute" style="left: -13px; top: -10px">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -402,8 +402,9 @@
       </div>
     </div>
     <script>
+      const meetLink = "https://meet.google.com/msd-mkog-xji";
+
       function generateCalendarLink() {
-        const meetLink = "https://meet.google.com/msd-mkog-xji";
         const text = encodeURIComponent("Grace and Michael's Wedding");
         const startDate = encodeURIComponent("20210214T110000Z+1");
         const endDate = encodeURIComponent("20210214T160000Z+1");
@@ -417,9 +418,17 @@
 
       window.addEventListener("load", () => {
         console.log(generateCalendarLink());
-        document
-          .querySelector("a.add-to-calendar")
-          .setAttribute("href", generateCalendarLink());
+        const elem = document.querySelector("a.add-to-calendar");
+        if (elem) {
+          elem.setAttribute("href", generateCalendarLink());
+          if (new Date() > new Date(2021, 1, 14)) {
+            const content = elem.querySelector("span.content");
+            if (content) {
+              content.innerHTML = "Watch this event Live";
+              elem.setAttribute("href", meetLink);
+            }
+          }
+        }
       });
     </script>
   </body>
